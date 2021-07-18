@@ -258,3 +258,18 @@ function duplicateEntries(){
         }
 } 
 duplicateEntries();
+
+// UC8 - Ability to Search Contact in City
+function searchByCityOrState(){
+    let searchByCity = prompt("Enter City to search:");
+    let SearchByState = prompt("Enter State to Serach:");
+    addressBookArray.forEach(addressBook => {
+    if(addressBook.city == searchByCity && addressBook.state == SearchByState){
+        console.log("Perosn City and State:" + searchByCity + "and" + SearchByState);
+    }
+    });
+    addressBookArray.filter(addressBook => addressBook.city == searchByCity)
+    addressBookArray.filter(addressBook => addressBook.state == SearchByState)
+    addressBookArray.forEach(addressBook => console.log(addressBookArray))
+}
+searchByCityOrState();
