@@ -305,3 +305,11 @@ function viewByCityOrState(){
         addressBookArray.forEach(AddressBook => console.log("Sort By Name:\n"+AddressBook.toString()))
     }
     sortByname();
+
+    //Sort By State
+    function sortByState(){
+        addressBookArray.sort((a, b) => a.state.toLowerCase().localeCompare(b.state.toLowerCase()));
+        console.log("sorted Array:")
+        addressBookArray.forEach(AddressBook => console.log("Sort By State:\n"+AddressBook.toString()));
+    }
+    sortByState();
