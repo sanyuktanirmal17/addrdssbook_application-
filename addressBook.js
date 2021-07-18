@@ -297,3 +297,11 @@ function viewByCityOrState(){
     }
     console.log("number of Person in city " +countByCity("Pune"));
     console.log("number of Person in state " +countByState("Maharashtra"));
+
+    //UC11 - Sort By Name
+    function sortByname(){
+        addressBookArray.sort((a, b) => a.firstName.toLowerCase().localeCompare(b.firstName.toLowerCase()));
+        console.log("sorted Array:")
+        addressBookArray.forEach(AddressBook => console.log("Sort By Name:\n"+AddressBook.toString()))
+    }
+    sortByname();
