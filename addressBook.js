@@ -273,3 +273,17 @@ function searchByCityOrState(){
     addressBookArray.forEach(addressBook => console.log(addressBookArray))
 }
 searchByCityOrState();
+
+// UC9 - Ability to View Contact in City or state
+function viewByCityOrState(){
+    let searchByCity = prompt("Enter City to search:");
+    let SearchByState = prompt("Enter State to Serach:");
+    addressBookArray.forEach(addressBook => {
+    if(addressBookArray.some(addressBook => addressBook.city == searchByCity && addressBook.state == SearchByState)){
+        console.log("Perosn City and State:" + searchByCity + "and" + SearchByState);
+    }
+    });
+    addressBookArray.filter(addressBook => addressBook.city == searchByCity && addressBook.state == SearchByState)
+    addressBookArray.forEach(addressBook => console.log(addressBookArray))
+    }
+    searchByCityOrState();
